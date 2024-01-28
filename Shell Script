@@ -1,0 +1,69 @@
+    What is Shell Script
+
+.   In the simplest terms, a shell script is a file containing a series of commands.The shell reads this files and carries out the cammands as though they have been entered directly on the cammand line.Normally the shell script has the file extension.sh
+.  To create a shell script, you use a text editor. There are maney, many text editors avavilable for your linux system, Both for the cammand line environment and the GUI environment. Here is a list of same comman ones:
+  1) Vi or vim is the cammand line interface text editor.
+  2) gedit is the GUI text editor.
+
+   Following steps are required to write shell script.
+ Step1) Use any editor like vi or gedit to write shell script
+ Syntax: vi<<Script file name>
+ Example:
+ #vi hello.sh //Start vi ediot
+ve i
+ Syntax: chmod <<permission>><<script file name>>
+
+Examples: 
+# chmod +x <script_file_name>
+# chmod 755 <script_file_name>
+
+Note: This will set read, write and execute (7) permission for owner, for group and other 
+permission are read and execute only (5).
+Step3) Execute your script as
+Syntax: bash script file name
+  sh <script_file_name>
+  ./<script_file_name>
+
+  Example for writing script
+  vi shub.sh //start vi editor
+  #!/bin/sh
+  echo "Hello welcome to the devops!"
+  Give the permission as follows 
+  chmod +x shub.sh
+  Run the hello.sh script file as follows
+  ./shub.sh
+
+  Output:
+  Hello welcome to the Devops
+
+  First Shell script
+
+  file name: shubdevops.sh
+
+  #!/bin/bash
+  #purpose : to display the message.
+  #Author: Pramod
+  #Date: 28th January 2024
+  echo "Hello welcome to the Devops"
+
+  The first line is called a shebang or a "bang" line.It is nothing but the absolute path to the bash interpreter.It consists of a number sign and an exclamation point character (#!), followed by the full path to the interpreter such as 
+  /bin/bash. If you do not specify an interpreter line, the default is usually the /bin/sh..
+
+
+  In order to execute the shell script make sure that you have execute permission.Give execute permission as follows.
+  #chmod +x shub.sh (or) chmod 111 shub.sh
+  There are different ways to run shell script:
+  1) bash shub.sh
+  2) sh shub.sh
+  3) ./shub.sh
+  4) . shub.sh
+
+  Case Sensitivity
+  As you know linux is case sensitive, the file names, variables, and arrays used in shell sript are also case sensitive.
+
+  Check out this Example:
+  #!/bin/bash 
+  stringle=10
+  stringle=20
+  echo "The value of string is $stringl"
+  echo "The value of stringl is $stringl"
